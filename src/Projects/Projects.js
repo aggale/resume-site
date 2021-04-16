@@ -1,6 +1,6 @@
 import React from "react";
 import { CardDeck } from "react-bootstrap";
-import Project from "../components/Project";
+import Project from "./Project";
 
 const Projects = ({ projects }) => {
   return (
