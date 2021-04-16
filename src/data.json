@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "resume-site": {
+      "title": "Resume Website",
+      "image": "resume-website-thumbnail.jpg",
+      "technologies": "React, JavaScript, CSS, Bootstrap",
+      "description": "Built a Resume website featuring project information and a blog using React.js and React-bootstrap. Hosted using AWS."
+    },
+    "recipe-site": {
+      "title": "Recipes Period",
+      "image": "resume-website-thumbnail.jpg",
+      "technologies": "JavaScript, Pug, Bootstrap",
+      "description": "Developed a blog for sharing recipes with a simple, easy-to-read UI."
+    }
+  }
+}

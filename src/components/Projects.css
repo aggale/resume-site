@@ -1,0 +1,28 @@
+.project-card {
+  background-color: #c7c7c7;
+  margin: 0px 100px;
+}
+
+.technologies {
+  font-style: italic;
+  font-size: smaller;
+  color: #1f1f1f;
+  margin-top: 0.75rem;
+}
+
+.project-card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card-button {
+  background-color: #282c34;
+  border-color: #282c34;
+  font-size: small;
+}
+
+.card-button:hover {
+  background-color: #575555;
+  border-color: #454343;
+}
