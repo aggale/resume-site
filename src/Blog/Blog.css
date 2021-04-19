@@ -1,0 +1,40 @@
+.blog-container {
+  margin: 1rem 3rem;
+  text-align: left;
+}
+
+.blog-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  margin: 3rem 0rem;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+}
+
+.card {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-color: 343a45;
+}
+
+.card-title {
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+  margin: 1rem 0rem 0rem 1rem;
+}
+
+hr {
+  border-top: 1px solid rgb(0 0 0 / 28%);
+}
+
+#profile-pic {
+  width: 10vh;
+}
