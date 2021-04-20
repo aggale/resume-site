@@ -6,10 +6,11 @@ import resumeSitePhoto from "../assets/images/resume-website-thumbnail.jpg"; // 
 //const photoPath = "../assets/images/";
 
 const Project = ({ project }) => {
-  console.log(project);
+  const image = require("../assets/images/" + project.image).default;
+
   return (
     <Card className="project-card">
-      <Card.Img variant="top" src={resumeSitePhoto} />
+      <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title className="font-weight-bold">{project.title}</Card.Title>
         <Card.Subtitle className="technologies">

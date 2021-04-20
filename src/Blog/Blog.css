@@ -18,13 +18,13 @@
   width: 75%;
 }
 
-.card {
+.blog-summary-card {
   margin: 1rem 0;
   padding: 1rem;
   border-color: 343a45;
 }
 
-.card-title {
+.blog-summary-card-title {
   font-weight: bold;
   font-style: italic;
   text-align: right;

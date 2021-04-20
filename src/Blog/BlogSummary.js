@@ -4,8 +4,8 @@ import "./Blog.css";
 
 const BlogSummary = ({ title, summary }) => {
   return (
-    <Card>
-      <Card.Title>{title}</Card.Title>
+    <Card className="blog-summary-card">
+      <Card.Title className="blog-summary-card-title">{title}</Card.Title>
       <hr />
       <Card.Text>{summary}</Card.Text>
     </Card>

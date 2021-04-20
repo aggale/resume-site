@@ -8,7 +8,7 @@
     },
     "recipe-site": {
       "title": "Recipes Period",
-      "image": "resume-website-thumbnail.jpg",
+      "image": "porgs.jpg",
       "technologies": "JavaScript, Pug, Bootstrap",
       "description": "Developed a blog for sharing recipes with a simple, easy-to-read UI."
     }
