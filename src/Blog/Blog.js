@@ -2,7 +2,6 @@ import React from "react";
 import { CardGroup } from "react-bootstrap";
 import BlogSummary from "./BlogSummary";
 import "./Blog.css";
-import profilePic from "../assets/images/cartoon-me-cutout.png";
 
 const Blog = ({ blogPosts }) => {
   console.log(blogPosts);
@@ -10,15 +9,12 @@ const Blog = ({ blogPosts }) => {
   return (
     <div class="blog-container">
       <div class="blog-intro">
-        <img src={profilePic} alt="Me" className="profile-pic" />
-        <div>
-          <h1>{"Welcome to my blog!"}</h1>
-          <p>
-            {
-              "Just a few thoughts I've compiled about the weird software development problems I face"
-            }
-          </p>
-        </div>
+        <h1>{"Welcome to my blog!"}</h1>
+        <p>
+          {
+            "Just a few thoughts I've compiled about the weird software development problems I face"
+          }
+        </p>
       </div>
       <CardGroup class="blog-posts">
         {Object.values(blogPosts).map((post) => (

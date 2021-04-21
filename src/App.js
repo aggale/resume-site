@@ -9,8 +9,8 @@ function App() {
   return (
     <div>
       <Header />
-      {/*<Projects projects={data.projects} />*/}
-      <Blog blogPosts={data["blog"]} />
+      <Projects projects={data.projects} />
+      {/*<Blog blogPosts={data["blog"]} />*/}
     </div>
   );
 }

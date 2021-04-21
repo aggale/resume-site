@@ -1,7 +1,8 @@
 body {
   text-align: center;
   background-color: #282c34;
-  font-family: "Martel", serif;
+  color: #d8d8d8;
+  font-family: "Cardo", serif;
 }
 
 .App-header {
@@ -11,11 +12,6 @@ body {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 #header-photo {
@@ -32,23 +28,9 @@ body {
   }
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
-}
-
-.nav-item {
-  padding: 1vw;
-  margin: 0 5vw;
-  background-color: #282c34;
-  border: 0px;
-  color: gray;
-}
-
 #main {
   background-color: #282c30;
   text-align: center;
-  color: gainsboro;
 }
 
 .side-by-side {
@@ -63,20 +45,46 @@ body {
   object-fit: scale-down;
 }
 
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0;
+  background-color: #282c34;
+  border: 0px;
+  color: gray;
+}
+
 .btn {
   font-family: "Roboto Mono", serif;
 }
 
 .nav-item:hover {
   padding: 1vw;
-  margin: 0 5vw;
+  margin: 0;
   background-color: #282c34;
   border: 0px;
   color: #d8d8d8;
 }
 
 .btn-xxl {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 460px) {
+  .btn-xxl {
+    font-size: 1.5rem;
+  }
+
+  .nav-item {
+    margin: 0 5vw;
+  }
+
+  .nav-item:hover {
+    margin: 0 5vw;
+  }
 }
 
 .button-area {

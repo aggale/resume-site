@@ -4,7 +4,10 @@ import Project from "./Project";
 
 const Projects = ({ projects }) => {
   return (
-    <div className="m-5">
+    <div id="projects-container">
+      <h3 className="mb-5">
+        Learn more about some of my personal projects (past and present!)
+      </h3>
       <CardDeck>
         {Object.keys(projects).map((project) => (
           <Project project={projects[project]} />

@@ -1,11 +1,21 @@
+#projects-container {
+  margin: 5vw;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .project-card {
   background-color: #c7c7c7;
-  margin: 0px 100px;
+  color: black;
 }
 
 .technologies {
   font-style: italic;
-  font-size: smaller;
+  font-size: medium;
   color: #1f1f1f;
   margin-top: 0.75rem;
 }
@@ -25,4 +35,11 @@
 .card-button:hover {
   background-color: #575555;
   border-color: #454343;
+}
+
+@media screen and (min-width: 1300px) {
+  #projects-container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
 }

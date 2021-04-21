@@ -7,7 +7,7 @@ const BlogSummary = ({ title, summary }) => {
     <Card className="blog-summary-card">
       <Card.Title className="blog-summary-card-title">{title}</Card.Title>
       <hr />
-      <Card.Text>{summary}</Card.Text>
+      <Card.Text className="blog-summary-card-text">{summary}</Card.Text>
     </Card>
   );
 };
