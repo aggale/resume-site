@@ -40,6 +40,29 @@
   font-family: serif;
 }
 
+.blog-post-card {
+  color: black;
+  padding: 1vh 2vw;
+}
+
+.blog-post-card-title {
+  font-size: xx-large;
+  padding: 1vh 0;
+}
+
+.blog-post-card-subtitle {
+  font-style: italic;
+}
+
+.blog-post-card-text {
+  text-align: left;
+}
+
+.blog-post-card-footer {
+  text-align: right;
+  margin: 0;
+}
+
 hr {
   border-top: 1px solid rgb(0 0 0 / 28%);
 }
