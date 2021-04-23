@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #282c34;
+  background-color: #282c30;
   color: #d8d8d8;
   font-family: "Cardo", serif;
 }
@@ -29,20 +29,7 @@ body {
 }
 
 #main {
-  background-color: #282c30;
   text-align: center;
-}
-
-.side-by-side {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-pic {
-  height: 15vh;
-  object-fit: scale-down;
 }
 
 .navbar {

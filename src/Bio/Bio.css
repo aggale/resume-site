@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2vh 2vw;
+}
+
+.profile-pic {
+  height: 20vh;
+  object-fit: scale-down;
+  margin-right: 2vw;
+}
+
+.about-me {
+  text-align: center;
+  margin-top: 1vh;
+  margin-bottom: 10vh;
+}
+
+.grid-description {
+  font-size: large;
+}
+
+.emphasized {
+  font-size: x-large;
+}
+
+.grid-pic {
+  height: 7vh;
+}
+
+@media screen and (min-width: 550px) {
+  .about-me {
+    margin-top: 7vh;
+  }
+
+  .grid-pic {
+    height: 10vh;
+  }
+}
