@@ -1,0 +1,6 @@
+When I was building my resume website, I wanted to have an image display with each project card on my Projects page. The problem? For Webpack to know where your images are, you need to import them into your React component. This is trivial for static images: all you need to do is store your image within src/ and add a simple import statement to the top of your component file, importing the image into a variable you can use for the src attribute of your <img> tag.
+
+The problem arises when, like me, you want to bring in a dynamic path. Since I am iterating over a list of projects found in the project data I pull in in my App component, I am sending an image path determined at runtime to my Project component. An import at the top of the component isn't possible. 
+
+Thus, we must go ye olde "require" statement, which can be used inline within your code: <img src={require(imagePath)} />.
+
