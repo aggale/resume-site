@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
 
 const NavBar = () => {
   return (
@@ -17,17 +16,6 @@ const NavBar = () => {
         </li>
       </ul>
     </nav>
-    // <nav className="navbar">
-    //   <Button className="nav-item" size="xxl">
-    //     Bio
-    //   </Button>
-    //   <Button className="nav-item" size="xxl">
-    //     Projects
-    //   </Button>
-    //   <Button className="nav-item" size="xxl">
-    //     Blog
-    //   </Button>
-    //</nav>
   );
 };
 

@@ -1,11 +1,10 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/Header";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Projects from "./Projects/Projects";
 import data from "./data.json";
 import Blog from "./Blog/Blog";
-import BlogPost from "./Blog/BlogPost";
 import Main from "./Bio/Main";
 
 function App() {

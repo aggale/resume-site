@@ -43,6 +43,7 @@ body {
   background-color: #282c34;
   border: 0px;
   list-style: none;
+  padding: 0px 10px;
 }
 
 .nav-item:hover {
