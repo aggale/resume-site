@@ -31,9 +31,14 @@
 
 .blog-summary-card-title {
   font-weight: bold;
-  font-style: italic;
-  text-align: right;
-  margin: 0.75rem 0rem 0rem 1rem;
+  font-size: xx-large;
+  text-align: center;
+  margin: 0.75rem 0rem 1rem 0rem;
+}
+
+.blog-summary-card-subtitle {
+  font-size: large;
+  text-align: center;
 }
 
 .blog-summary-card-text {

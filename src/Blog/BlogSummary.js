@@ -1,13 +1,22 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Blog.css";
 
-const BlogSummary = ({ title, summary }) => {
+const BlogSummary = ({ url, title, summary, partialText }) => {
   return (
     <Card className="blog-summary-card">
       <Card.Title className="blog-summary-card-title">{title}</Card.Title>
+      <Card.Subtitle className="blog-summary-card-subtitle">
+        {summary}
+      </Card.Subtitle>
       <hr />
-      <Card.Text className="blog-summary-card-text">{summary}</Card.Text>
+      <Card.Text className="blog-summary-card-text">{partialText}</Card.Text>
+      <div>
+        <Button variant="outline-dark" size="sm">
+          <Link to={`/blog/${url}`}>Read more...</Link>
+        </Button>
+      </div>
     </Card>
   );
 };

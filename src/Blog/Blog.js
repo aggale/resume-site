@@ -1,26 +1,28 @@
-import React from "react";
-import { CardGroup } from "react-bootstrap";
-import BlogSummary from "./BlogSummary";
-import "./Blog.css";
+import react from "react";
+import { Route, useRouteMatch, Switch } from "react-router-dom";
+import BlogMain from "./BlogMain";
+import BlogPost from "./BlogPost";
 
-const Blog = ({ blogPosts }) => {
-  console.log(blogPosts);
-  console.log("hey");
+const Blog = (props) => {
+  let { path, url } = useRouteMatch();
+
   return (
-    <div class="blog-container">
-      <div class="blog-intro">
-        <h1>{"Welcome to my blog!"}</h1>
-        <p>
-          {
-            "Just a few thoughts I've compiled about the weird software development problems I face"
-          }
-        </p>
-      </div>
-      <CardGroup class="blog-posts">
-        {Object.values(blogPosts).map((post) => (
-          <BlogSummary title={post["title"]} summary={post["summary"]} />
-        ))}
-      </CardGroup>
+    <div>
+      <Switch>
+        <Route
+          path="/blog/:id"
+          render={({ match }) => (
+            <BlogPost
+              blogPost={Object.values(props.blogPosts).find(
+                (p) => p.url === match.params.id
+              )}
+            />
+          )}
+        />
+        <Route exact path="/blog">
+          <BlogMain blogPosts={props.blogPosts} />
+        </Route>
+      </Switch>
     </div>
   );
 };

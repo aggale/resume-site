@@ -1,0 +1,24 @@
+2
+A big logisitical problem while writing a novel is how to save multiple drafts when you make significant edits or decide to try out a different direction for a chapter but want to keep the text for the new version and the old version around until you decide which one you like. If you're like me, you end up with a folder full of cryptically named drafts that seems to grow and grow. Until the day I realized--this problem has already been solved: source control.
+
+In a way, writing a novel is not so different from writing the code for a piece of software:
+1) You incrementally save as you work, but you'd like to be able to go back to an old version if you need to.
+2) You sometimes want to try a new idea to see if it works, then want to merge it back into the main project.
+3) You want to be able to collaborate with someone else who makes edits and merges them with your work (but only with your permission!)
+4) And it would be nice if you could have notes about what changes were in each version.
+
+Git solves these problems really nicely:
+1) If you commit frequently as you're working, you will have a record of your past saves and can switch to an old commit (unlike just saving in Word).
+2) Branching and merging allows for this kind of parallel work.
+3) This is basically just a pull request.
+4) Well-written commit messages will give you a clear picture of your change history. In my opinion, this might be the best feature git gives you.
+
+There are challenges to this, too. Source control systems are generally designed for code, not Word documents. Git can be used on any file, but it doesn't understand what specifically has changed between two different Word documents. You're also dealing with much larger files than your typical .js file. But overall, using something like git provides a much better workflow and method for saving when working on a writing project.
+END
+1
+When I was building my resume website, I wanted to have an image display with each project card on my Projects page. The problem? For Webpack to know where your images are, you need to import them into your React component. This is trivial for static images: all you need to do is store your image within src/ and add a simple import statement to the top of your component file, importing the image into a variable you can use for the src attribute of your <img> tag.
+
+The problem arises when, like me, you want to bring in a dynamic path. Since I am iterating over a list of projects found in the project data I pull in in my App component, I am sending an image path determined at runtime to my Project component. An import at the top of the component isn't possible. 
+
+Thus, we must go ye olde "require" statement, which can be used inline within your code: <img src={require(imagePath)} />.
+END
