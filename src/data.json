@@ -4,13 +4,17 @@
       "title": "Resume Website",
       "image": "resume-website-thumbnail.jpg",
       "technologies": "React, JavaScript, CSS, Bootstrap",
-      "description": "Built a Resume website featuring project information and a blog using React.js and React-bootstrap. Hosted using AWS."
+      "description": "Built a Resume website featuring project information and a blog using React.js and React-bootstrap. Hosted using AWS.",
+      "url": "http://annaggale.com",
+      "github": "https://github.com/aggale/resume-site"
     },
     "recipe-site": {
-      "title": "Recipes Period",
-      "image": "porgs.jpg",
-      "technologies": "JavaScript, Pug, Bootstrap",
-      "description": "Developed a blog for sharing recipes with a simple, easy-to-read UI."
+      "title": "My Old Blog",
+      "image": "old-blog-thumbnail.jpg",
+      "technologies": "NLP, JavaScript, Bootstrap, DynamoDB, Arduino",
+      "description": "This was a blog where I wrote about some of the projects I was doing in 2017-2018. I talk about building websites, some of my graduate NLP work, and playing with Arduino.",
+      "url": "https://annaggale.wordpress.com/",
+      "github": ""
     }
   },
   "blog": {

@@ -71,6 +71,10 @@ a:hover {
   font-size: 1.25rem;
 }
 
+.btn:hover {
+  background-color: #282c34;
+}
+
 @media screen and (min-width: 460px) {
   .btn-xxl {
     font-size: 1.5rem;

@@ -18,8 +18,14 @@ const Project = ({ project }) => {
         </Card.Subtitle>
         <Card.Text className="mt-3">{project.description}</Card.Text>
         <div className="project-card-buttons">
-          <Button className="card-button">View Project</Button>
-          <Button className="card-button">Github</Button>
+          <Button href={project.url} className="card-button">
+            View Project
+          </Button>
+          {project.github && (
+            <Button href={project.github} className="card-button">
+              Github
+            </Button>
+          )}
         </div>
       </Card.Body>
     </Card>

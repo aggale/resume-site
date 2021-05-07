@@ -1,5 +1,5 @@
 import React from "react";
-import header from "../assets/images/websiteheader.png";
+import header from "../assets/images/websiteheader2.jpg";
 import NavBar from "../components/NavBar";
 
 const Header = () => {

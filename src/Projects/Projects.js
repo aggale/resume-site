@@ -10,7 +10,7 @@ const Projects = ({ projects }) => {
       </h3>
       <CardDeck>
         {Object.keys(projects).map((project) => (
-          <Project project={projects[project]} />
+          <Project key={project} project={projects[project]} />
         ))}
       </CardDeck>
     </div>
