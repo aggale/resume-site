@@ -1,6 +1,26 @@
+/* General */
+
+hr {
+  border-top: 1px solid rgb(0 0 0 / 28%);
+}
+
+.btn {
+  background: gray;
+  border: black;
+}
+
+.btn a {
+  color: white;
+}
+
+/* BlogMain */
+
 .blog-container {
-  margin: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 3rem 1rem 3rem;
   text-align: left;
+  align-items: center;
 }
 
 .blog-intro {
@@ -8,25 +28,25 @@
   text-align: center;
 }
 
-.blog-intro h1 {
-  font-size: 7vw;
-}
-
-.blog-intro p {
-  font-size: 4vw;
+.blog-intro img {
+  width: 100%;
 }
 
 .blog-posts {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
+
+/* BlogSummary Card */
 
 .blog-summary-card {
   margin: 1rem 0;
   padding: 1rem;
   color: black;
-  border-color: 343a45;
+  border-color: gray;
+  border-width: 2px;
 }
 
 .blog-summary-card-title {
@@ -44,6 +64,13 @@
 .blog-summary-card-text {
   font-family: serif;
 }
+
+.blog-summary-card-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* BlogPost Card */
 
 .blog-post-card {
   color: black;
@@ -68,14 +95,21 @@
   margin: 0;
 }
 
-hr {
-  border-top: 1px solid rgb(0 0 0 / 28%);
-}
+/* For larger screens */
 
 @media screen and (min-width: 500px) {
+  .blog-posts {
+    width: 75%;
+  }
+
+  .blog-summary-card {
+    width: 80%;
+  }
+
   .blog-intro h1 {
     font-size: 4vw;
   }
+
   .blog-intro p {
     font-size: 2vw;
   }

@@ -1,3 +1,5 @@
+/* Body and header */
+
 body {
   text-align: center;
   background-color: #282c30;
@@ -19,18 +21,11 @@ body {
   width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 #main {
   text-align: center;
 }
+
+/* Navigation */
 
 .nav-bar {
   display: flex;
@@ -52,6 +47,8 @@ body {
   background-color: #282c34;
   border: 0px;
 }
+
+/* General Components (Links and Buttons) */
 
 a {
   color: gray;
@@ -75,6 +72,16 @@ a:hover {
   background-color: #282c34;
 }
 
+.button-area {
+  border: none;
+}
+
+.card {
+  background-color: #d4d4d4;
+}
+
+/* For larger screens */
+
 @media screen and (min-width: 460px) {
   .btn-xxl {
     font-size: 1.5rem;
@@ -87,8 +94,4 @@ a:hover {
   .nav-item:hover {
     margin: 0 5vw;
   }
-}
-
-.button-area {
-  border: none;
 }

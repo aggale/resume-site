@@ -12,8 +12,8 @@ const BlogSummary = ({ url, title, summary, partialText }) => {
       </Card.Subtitle>
       <hr />
       <Card.Text className="blog-summary-card-text">{partialText}</Card.Text>
-      <div>
-        <Button variant="outline-dark" size="sm">
+      <div className="blog-summary-card-buttons">
+        <Button size="sm">
           <Link to={`/blog/${url}`}>Read more...</Link>
         </Button>
       </div>

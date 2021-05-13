@@ -1,6 +1,6 @@
 import React from "react";
-import header from "../assets/images/websiteheader2.jpg";
 import NavBar from "../components/NavBar";
+import header from "../assets/images/websiteheadersmall.jpg";
 
 const Header = () => {
   return (

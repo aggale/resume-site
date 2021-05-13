@@ -1,9 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import "./Projects.css";
-import resumeSitePhoto from "../assets/images/resume-website-thumbnail.jpg"; // Temp
-
-//const photoPath = "../assets/images/";
 
 const Project = ({ project }) => {
   const image = require("../assets/images/" + project.image).default;
@@ -13,7 +10,7 @@ const Project = ({ project }) => {
       <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title className="font-weight-bold">{project.title}</Card.Title>
-        <Card.Subtitle className="technologies">
+        <Card.Subtitle className="project-card-technologies">
           {project.technologies}
         </Card.Subtitle>
         <Card.Text className="mt-3">{project.description}</Card.Text>
