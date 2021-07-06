@@ -62,6 +62,8 @@ a:hover {
 
 .btn {
   font-family: "Roboto Mono", serif;
+  background-color: #282c34;
+  border-color: #282c34;
 }
 
 .btn-xxl {
@@ -69,7 +71,8 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: #282c34;
+  background-color: gray;
+  border-color: #282c34;
 }
 
 .button-area {

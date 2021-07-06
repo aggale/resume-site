@@ -3,6 +3,7 @@ import { Card, Button } from "react-bootstrap";
 import "./Projects.css";
 
 const Project = ({ project }) => {
+  console.log('image', project)
   const image = require("../assets/images/" + project.image).default;
 
   return (

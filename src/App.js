@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import "./App.css";
-import Header from "./components/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Header from "./components/Header";
 import Projects from "./Projects/Projects";
 import data from "./data.json";
 import Blog from "./Blog/Blog";
 import Main from "./Bio/Main";
+
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -18,7 +20,7 @@ class App extends Component {
             renders the first one that matches the current URL. */}
           <Switch>
             <Route path="/projects">
-              <Projects projects={data.projects} />
+              <Projects />
             </Route>
             <Route path="/blog">
               <Blog blogPosts={data["blog"]} />

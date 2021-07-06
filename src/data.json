@@ -8,7 +8,7 @@
       "url": "http://annaggale.com",
       "github": "https://github.com/aggale/resume-site"
     },
-    "recipe-site": {
+    "old-blog": {
       "title": "My Old Blog",
       "image": "old-blog-thumbnail.jpg",
       "technologies": "NLP, JavaScript, Bootstrap, DynamoDB, Arduino",
