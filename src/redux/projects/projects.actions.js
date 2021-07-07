@@ -1,6 +1,6 @@
-import { ProjectsTypes } from './projects.types'
+import { ProjectsActionTypes } from './projects.types'
 
 export const updateProjects = (projects) => ({
-    type: ProjectsTypes.UPDATE_PROJECTS,
+    type: ProjectsActionTypes.UPDATE_PROJECTS,
     payload: projects
 })

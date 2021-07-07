@@ -5,6 +5,16 @@ import "./Blog.css";
 import blogHeader from "../assets/images/blog-header.jpg";
 
 const BlogMain = ({ blogPosts }) => {
+   console.log(blogPosts)
+  Object.values(blogPosts).forEach((post) => {
+    console.log(`
+      key=${post.url}
+      url=${post.url}
+      title=${post.title}
+      subtitle=${post.summary}
+      partialText=${post.contents}
+    `)});
+
   return (
     <div className="blog-container">
       <div className="blog-intro">
@@ -17,7 +27,7 @@ const BlogMain = ({ blogPosts }) => {
             url={post.url}
             title={post.title}
             summary={post.summary}
-            partialText={post.partialText}
+            partialText={post.contents[0].value}
           />
         ))}
       </CardGroup>

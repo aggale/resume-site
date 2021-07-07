@@ -16,7 +16,6 @@ const config =
 firebase.initializeApp(config);
 
 export const convertProjectsSnapshotToMap = (projects) => {
-  console.log(projects.docs[0])
   return projects.docs.map(doc => {
     const { url, title, technologies, description, image, order } = doc.data();
     const { id } = doc;
@@ -32,6 +31,21 @@ export const convertProjectsSnapshotToMap = (projects) => {
     }
   })
   .reduce((projectsObj, project) => ({...projectsObj, [project.id]: project}), {})
+}
+
+export const convertBlogPostsSnapshotToMap = (blog) => {
+  return blog.docs.map(doc => {
+    const {title, summary, contents, posted, url} = doc.data();
+
+    return {
+      title,
+      summary,
+      posted,
+      url,
+      contents,
+    }
+  })
+  .reduce((blogPostsObj, blogPost) => ({...blogPostsObj, [blogPost.url]: blogPost}), {})
 }
 
 export const firestore = firebase.firestore();

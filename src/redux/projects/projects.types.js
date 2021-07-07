@@ -1,3 +1,3 @@
-export const ProjectsTypes = {
+export const ProjectsActionTypes = {
     UPDATE_PROJECTS: "UPDATE_PROJECTS"
 }

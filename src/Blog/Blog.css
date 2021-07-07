@@ -95,6 +95,16 @@ hr {
   margin: 0;
 }
 
+/* CreateBlogPost */
+.create-blog-post-header {
+  margin-top: 2em;
+}
+
+.create-blog-post-form {
+  width: 70%;
+  margin: auto;
+}
+
 /* For larger screens */
 
 @media screen and (min-width: 500px) {
