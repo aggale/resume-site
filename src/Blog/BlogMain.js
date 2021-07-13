@@ -1,20 +1,15 @@
 import React from "react";
 import { CardGroup } from "react-bootstrap";
+import { connect } from 'react-redux';
+
 import BlogSummary from "./BlogSummary";
+
+import { selectBlogPostsList } from '../redux/blog/blog.selectors'
+
 import "./Blog.css";
 import blogHeader from "../assets/images/blog-header.jpg";
 
 const BlogMain = ({ blogPosts }) => {
-   console.log(blogPosts)
-  Object.values(blogPosts).forEach((post) => {
-    console.log(`
-      key=${post.url}
-      url=${post.url}
-      title=${post.title}
-      subtitle=${post.summary}
-      partialText=${post.contents}
-    `)});
-
   return (
     <div className="blog-container">
       <div className="blog-intro">
@@ -27,7 +22,7 @@ const BlogMain = ({ blogPosts }) => {
             url={post.url}
             title={post.title}
             summary={post.summary}
-            partialText={post.contents[0].value}
+            partialText={post.content ? post.content[0].value : ""}
           />
         ))}
       </CardGroup>
@@ -35,4 +30,8 @@ const BlogMain = ({ blogPosts }) => {
   );
 };
 
-export default BlogMain;
+const mapStateToProps = (state) => ({
+  blogPosts: selectBlogPostsList(state)
+})
+
+export default connect(mapStateToProps)(BlogMain);

@@ -34,15 +34,11 @@ class Blog extends Component {
           <Route
             path="/blog/:id"
             render={({ match }) => (
-              <BlogPost
-                blogPost={Object.values(blogPosts).find(
-                  (p) => p.url === match.params.id
-                )}
-              />
+              <BlogPost id={match.params.id} />
             )}
           />
           <Route exact path="/blog">
-            <BlogMain blogPosts={blogPosts} />
+            <BlogMain />
           </Route>
         </Switch>
       </div>
@@ -50,12 +46,8 @@ class Blog extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  blogPosts: state.blog.blogPosts
-})
-
 const mapDispatchToProps = (dispatch) => ({
   updateBlogPostsAction: blogPostsMap => dispatch(updateBlogPostsAction(blogPostsMap))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Blog);
+export default connect(null, mapDispatchToProps)(Blog);

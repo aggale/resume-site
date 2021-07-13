@@ -1,38 +1,18 @@
 import React, { Component } from "react";
 import { Card } from "react-bootstrap";
+import { connect } from 'react-redux';
+import { selectBlogPost } from "../redux/blog/blog.selectors";
+
 import "./Blog.css";
 
 class BlogPost extends Component {
-  constructor() {
-    super();
-    this.state = { fullText: "" };
-  }
-
-  componentDidMount() {
-    const targetId = this.props.blogPost.id;
-    fetch("/blog.txt")
-      .then((response) => response.text())
-      .then((data) => {
-        data
-          .trimEnd()
-          .split("END")
-          .forEach((post) => {
-            const postLines = post.trimStart().split("\n");
-            const idMatches = postLines[0].match(/^\d+/);
-            const id = idMatches ? idMatches[0] : null;
-
-            if (id == targetId) {
-              const body = postLines.slice(1).join("\n");
-              this.setState({ fullText: body });
-            }
-          });
-      });
-  }
-
   render() {
-    const { title, summary, posted } = this.props.blogPost;
-    const { fullText } = this.state;
+    if (!this.props.blogPost) {
+      return (<div>Post not found.</div>);
+    } 
 
+    const { title, summary, posted, content } = this.props.blogPost;
+    console.log('blogPost', this.props.blogPost)
     return (
       <div className="m-5">
         <Card className="blog-post-card">
@@ -41,7 +21,13 @@ class BlogPost extends Component {
             {summary}
           </Card.Subtitle>
           <hr />
-          <Card.Text className="blog-post-card-text">{fullText}</Card.Text>
+          {
+            content.map(item => 
+              item.type === 'text' ? 
+              <Card.Text className="blog-post-card-text">{item.value}</Card.Text> :
+              <Card.Img src={require("../assets/images/" + item.value).default} />
+            )
+          }
           <Card.Footer className="blog-post-card-footer">
             {`Posted: ${posted}`}
           </Card.Footer>
@@ -51,4 +37,8 @@ class BlogPost extends Component {
   }
 }
 
-export default BlogPost;
+const mapStateToProps = (state, props) => ({
+  blogPost: selectBlogPost(state, props)
+})
+
+export default connect(mapStateToProps)(BlogPost);

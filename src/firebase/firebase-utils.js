@@ -15,6 +15,8 @@ const config =
 
 firebase.initializeApp(config);
 
+export const firestore = firebase.firestore();
+
 export const convertProjectsSnapshotToMap = (projects) => {
   return projects.docs.map(doc => {
     const { url, title, technologies, description, image, order } = doc.data();
@@ -35,17 +37,40 @@ export const convertProjectsSnapshotToMap = (projects) => {
 
 export const convertBlogPostsSnapshotToMap = (blog) => {
   return blog.docs.map(doc => {
-    const {title, summary, contents, posted, url} = doc.data();
+    const {title, summary, content, posted, url} = doc.data();
+
+    // Turn posted into a date
+    const date = new Date(0);
+    date.setSeconds(posted.seconds);
 
     return {
       title,
       summary,
-      posted,
+      posted: date.toDateString(),
       url,
-      contents,
+      content,
     }
   })
   .reduce((blogPostsObj, blogPost) => ({...blogPostsObj, [blogPost.url]: blogPost}), {})
 }
 
-export const firestore = firebase.firestore();
+export const addBlogPost = async (title, summary, url, content) => {
+  // Set timestamp for posted date to current date
+  const posted = firebase.firestore.Timestamp.fromDate(new Date());
+
+  try {
+    await firestore.collection('blogPosts').doc(url).set({
+      title,
+      summary,
+      posted,
+      url,
+      content
+    });
+  } catch (error) {
+    console.log("Error adding blog post: ", error);
+    return false;
+  }
+  
+  return true;
+}
+

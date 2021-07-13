@@ -5,6 +5,7 @@ import { CardDeck } from "react-bootstrap";
 import Project from "./Project";
 
 import { updateProjects } from '../redux/projects/projects.actions';
+import { selectProjectList, selectSortedProjectList } from '../redux/projects/projects.selectors'
 
 import { convertProjectsSnapshotToMap, firestore } from '../firebase/firebase-utils';
 
@@ -23,7 +24,7 @@ class Projects extends Component {
 
   render() {
     const projects = this.props.projects;
-    const sortedProjects = Object.keys(projects).sort((a, b) => projects[a].order - projects[b].order);
+    const sortedProjects = this.props.sortedProjects;
 
     return (
       <div id="projects-container">
@@ -32,7 +33,7 @@ class Projects extends Component {
         </h3>
         <CardDeck>
           {sortedProjects.map((project) => (
-            <Project key={project} project={projects[project]} />
+            <Project key={project.id} project={projects[project]} />
           ))}
         </CardDeck>
       </div>
@@ -42,7 +43,8 @@ class Projects extends Component {
 };
 
 const mapStateToProps = (state) => ({
-  projects: state.projects.projectList
+  projects: selectProjectList(state),
+  sortedProjects: selectSortedProjectList(state)
 })
 
 const mapDispatchToProps = (dispatch) => ({
