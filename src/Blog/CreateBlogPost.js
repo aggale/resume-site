@@ -28,7 +28,12 @@ class CreateBlogPost extends React.Component {
         addBlogPost(title, summary, url, content);
 
         // Clear form
-        event.target.reset();
+        this.setState({
+            title: '',
+            summary: '',
+            url: '',
+            content: []
+        });
     }
 
     /**

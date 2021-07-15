@@ -88,11 +88,17 @@ hr {
 
 .blog-post-card-text {
   text-align: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .blog-post-card-footer {
   text-align: right;
   margin: 0;
+}
+
+.card-img {
+  margin: 1em auto 1em auto;
 }
 
 /* CreateBlogPost */
@@ -122,5 +128,14 @@ hr {
 
   .blog-intro p {
     font-size: 2vw;
+  }
+
+  .blog-post-card {
+    width: 75%;
+    margin: auto;
+  }
+
+  .card-img {
+    width: 75%;
   }
 }
