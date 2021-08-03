@@ -33,7 +33,7 @@ class Projects extends Component {
         </h3>
         <CardDeck>
           {sortedProjects.map((project) => (
-            <Project key={project.id} project={projects[project]} />
+            <Project key={project} project={projects[project]} />
           ))}
         </CardDeck>
       </div>
