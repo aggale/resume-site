@@ -12,7 +12,7 @@ class BlogPost extends Component {
     } 
 
     const { title, summary, posted, content } = this.props.blogPost;
-    console.log('blogPost', this.props.blogPost)
+
     return (
       <div className="m-5">
         <Card className="blog-post-card">

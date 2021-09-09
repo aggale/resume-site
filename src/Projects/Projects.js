@@ -10,16 +10,22 @@ import { selectProjectList, selectSortedProjectList } from '../redux/projects/pr
 import { convertProjectsSnapshotToMap, firestore } from '../firebase/firebase-utils';
 
 class Projects extends Component {
+  unsubscribeFromProjects = null;
+
   componentDidMount() {
     const { updateProjectsAction } = this.props;
 
     const projectsRef = firestore.collection('projects');
     
-    projectsRef.onSnapshot(async (snapshot) => {
+    this.unsubscribeFromProjects = projectsRef.onSnapshot(async (snapshot) => {
       const projectsMap = convertProjectsSnapshotToMap(snapshot);
 
       updateProjectsAction(projectsMap);
     })
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromProjects();
   }
 
   render() {
