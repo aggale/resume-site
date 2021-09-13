@@ -19,12 +19,13 @@ export const firestore = firebase.firestore();
 
 export const convertProjectsSnapshotToMap = (projects) => {
   return projects.docs.map(doc => {
-    const { url, title, technologies, description, image, order } = doc.data();
+    const { url, github, title, technologies, description, image, order } = doc.data();
     const { id } = doc;
 
     return {
       id,
       url,
+      github,
       title,
       technologies,
       description,

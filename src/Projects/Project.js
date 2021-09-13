@@ -15,9 +15,11 @@ const Project = ({ project }) => {
         </Card.Subtitle>
         <Card.Text className="mt-3">{project.description}</Card.Text>
         <div className="project-card-buttons">
-          <Button href={project.url} className="card-button">
-            View Project
-          </Button>
+          {project.url && (
+            <Button href={project.url} className="card-button">
+              View Project
+            </Button>
+          )}
           {project.github && (
             <Button href={project.github} className="card-button">
               Github

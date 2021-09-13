@@ -5,7 +5,7 @@ import { CardDeck } from "react-bootstrap";
 import Project from "./Project";
 
 import { updateProjects } from '../redux/projects/projects.actions';
-import { selectProjectList, selectSortedProjectList } from '../redux/projects/projects.selectors'
+import { selectProjectList, selectSortedProjectList } from '../redux/projects/projects.selectors';
 
 import { convertProjectsSnapshotToMap, firestore } from '../firebase/firebase-utils';
 
